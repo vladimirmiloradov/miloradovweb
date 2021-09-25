@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <title>Форма обратной связи</title>
+</head>
+
+<body>
+    <main>
+
+        <h1 class="text-center">Форма обратной связи</h1>
+        <div class="center">
+            <form method="POST" action="https://httpbin.org/post" enctype="multipart/form-data">
+
+                <input type="hidden" name="user_id" value="7">
+
+                <div class="form-group">
+                    <label for="fio"><b>ФИО</b></label><br>
+                    <input type="text" id="fio" name="fio" placeholder="Иванов Иван Иванович" class="margin width"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email"><b>Email</b></label><br>
+                    <input type="email" name="email" id="email" placeholder="ivanov@gmail.com" required
+                        class="margin width">
+                </div>
+
+                <div class="form-group">
+                    <p><b>Как вы о нас узнали?</b></p>
+                    <label for="advertising">Реклама</label>
+                    <input type="radio" name="source" id="advertising" value="advertising" checked>
+
+                    <label for="friends">Друзья</label>
+                    <input type="radio" name="source" id="friends" value="friends">
+                </div>
+
+                <div class="form-group">
+                    <label for="msg"><b>Текст обращения</b></label><br>
+                    <textarea type="msg" name="msg" cols="40" rows="10" class="margin">Какой-то текст</textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="category"><b>Категория обращения</b></label><br>
+                    <select name="category" id="category" class="custom-select">
+                        <option selected disabled>Выберите категорию в меню</option>
+                        <option value="proposal">Предложение</option>
+                        <option value="feedback">Отзыв</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="agreement"><b>Согласен на обработку данных</b></label>
+                    <input type="checkbox" name="agreement" id="agreement" value="true" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="attachment"><b>Вложение</b></label><br>
+                    <input type="file" name="attachment" id="attachment" class="margin">
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary" value="Отправить">Отправить</button>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>
