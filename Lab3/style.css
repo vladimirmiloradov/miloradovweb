@@ -1,0 +1,266 @@
+* {
+    margin: 0;
+	  padding: 0;
+}  
+
+ body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+}
+
+.wrapper {
+	  display: flex;
+	  flex-direction: column;
+	  min-height: 100vh;
+}
+
+.loader_bg {
+    position: fixed;
+    z-index: 999999;
+    background: #fff;
+    width: 100%;
+    height: 100%;
+}
+
+.loader h1 {
+    margin-top: 150px;
+}
+
+.loader{
+    border: 0 solid transparent;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: calc(50vh - 75px);
+    left: calc(50vw - 75px);
+}
+.loader:before , .loader:after{
+    content: ' ';
+    border: 1em solid #ff5733;
+    border-radius: 50%;
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: loader 0.8s linear infinite;
+    opacity: 0; 
+}
+.loader:before{
+    animation-delay: .5s;
+}
+@keyframes loader{
+    0%{
+      transform: scale(0);
+      opacity: 0;
+    }
+    50%{
+      opacity: 1;
+    }
+    100%{
+      transform: scale(1);
+      opacity: 0;
+    }
+}
+.navbar{
+    background:#F97300;
+    padding: 0;  
+    position: 0;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+.navbar-brand:hover {
+    color: white;
+}
+
+.nav-link , .navbar-brand{
+    color: #f4f4f4;
+    cursor: pointer;
+}
+.nav-link{
+    margin-right: 1em !important;
+    font-weight: bold;
+}
+.nav-link:hover{
+    background: #f4f4f4;
+    color: #f97300;
+}
+.navbar-collapse{
+    justify-content: flex-end;
+}
+.navbar-toggler{
+    background:#fff !important;
+}
+.bg-dark{
+    background-color:#343a40!important
+}
+.bg-primary{
+    background-color:#343a40!important
+}
+.header{
+    background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/1400/d2e2b017587787.562bbedc7df16.jpg);
+    background-size: cover;
+    height: 100vh;
+}
+.overlay{
+    min-height: 100%;
+    min-width: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(244, 244, 244, 0.79);
+}
+.description{
+    position: absolute;
+    top: 30%;
+    margin: auto;
+    padding: 2em;
+}
+.description h1{
+    color:#F97300 ;
+}
+.description p{
+    color:#000;
+    font-size: 20px;
+    width: 50%;
+    line-height: 1.5;
+}
+.description button{
+    border:1px  solid #F97300;
+    background:#F97300;
+    color:#fff;
+}
+.description button:hover{
+    background-color:#F97300;
+}
+.description a{
+    text-decoration: none;
+    color: #fff;
+}
+.team{
+    margin: 0 0 64px 0;
+    position: relative;  
+}
+.team h1{
+    color:#F97300;
+    margin: 2em; 
+}
+.team .item{
+    position: relative;
+}
+
+.item a {
+    text-decoration: none;
+}
+
+.item:hover {
+    border: 4px solid #F97300; 
+}
+.team .des{
+    background: #F97300;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    border-bottom-left-radius: 0%;
+    transition:.3s ease-in-out;
+}
+   
+.info {
+    width: 1000px; 
+    margin: 32px auto 0 auto;
+}
+
+.info h1 {
+    font-size: 27px; 
+    text-align: center;
+}
+
+.blog{
+    margin: 0 auto 64px auto;
+    position: relative; 
+    flex: 1 0 auto;
+}
+.blog h1{
+    color:#F97300;
+    margin: 2em; 
+}
+.blog .card{
+    box-shadow: 0 0 20px #ccc;
+    width: 350px;
+    height: 400px;
+}
+.blog .card img{
+    width: 100%;
+    height: 12em;
+}
+.blog .card-title{
+    color:#F97300;
+     
+}
+.blog .card-body{
+    padding: 1em;
+    width: 350px;
+    height: 300px;
+}
+
+.text-center {
+    color: #f97300;
+}
+
+.footer {
+    background-color: #f97300;
+    color: white;
+    flex: 0 0 auto;
+    margin-top: auto;
+}
+
+.footer section {
+    margin-top: 24px;
+}
+
+.footer h2 {
+    text-align: center;
+}
+.reports-header {
+    color: #f97300;
+    text-align: center;
+    margin: 64px 0 0 0;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.cards__item {
+    flex-basis: 24%;
+    padding: 5px;
+    border: 3px solid #ff5733;
+    border-radius: 3%;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.cards__item:hover {
+    background-color: #fa6645;
+    color: white;
+}
+
+.margin {
+    margin-left: 50px;
+}
+
+.reports-header {
+    text-align: center; 
+    color: #f97300; 
+    margin-bottom: 20px; 
+    margin-top: 64px;
+}
