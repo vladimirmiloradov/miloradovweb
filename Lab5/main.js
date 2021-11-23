@@ -94,6 +94,36 @@ function renderPaginationElement(info) {
     paginationContainer.append(btn);
 }
 
+function autoCompleteInput(event) {
+    let input = document.querySelector('input');
+    let requestUrl = "http://cat-facts-api.std-900.ist.mospolytech.ru/autocomplete?q=" + input.value;
+    if (event.target){
+        let ul = document.getElementById('list');
+        ul.innerHTML = '';
+        downloadDataInput(requestUrl);
+    }
+}
+
+function downloadDataInput(requestUrl) {
+    let xhr = new XMLHttpRequest();
+    xhr.open('GET', requestUrl);
+    xhr.responseType = 'json';
+    xhr.onload = function () {
+        renderListInput(this.response);
+    }
+    xhr.send();
+}
+
+function renderListInput(arrayInput) {
+    let ul = document.getElementById('list');
+    for (let i = 0; i < arrayInput.length; i++) {
+        let li = document.createElement('li');
+        li.innerHTML = arrayInput[i];
+        ul.append(li);
+    }
+    
+}
+
 function downloadData(page = 1) {
     let url;
     let factsList = document.querySelector('.facts-list');
@@ -133,6 +163,9 @@ window.onload = function () {
     document.querySelector('.per-page-btn').onchange = perPageBtnHandler;
     let searchbtn = document.querySelector('.search-btn');
     searchbtn.addEventListener('click', clickHandler);
+    document.getElementById('search-field').oninput = autoCompleteInput;
+    let listelem = document.querySelector('.list-input');
+    listelem.addEventListener('click', clickList);
 }
 
 let newDataUrl = 0;
@@ -140,6 +173,16 @@ let newDataUrl = 0;
 function clickHandler(event) {
     let input = document.querySelector('input');
     newDataUrl = "http://cat-facts-api.std-900.ist.mospolytech.ru/facts?q=" + input.value;
+    downloadData();
+}
+
+function clickList(event) {
+    let li = event.target;
+    let input = document.querySelector('input');
+    newDataUrl = "http://cat-facts-api.std-900.ist.mospolytech.ru/facts?q=" + li.innerHTML;
+    let ul = document.getElementById('list');
+    ul.innerHTML = '';
+    input.value = li.innerHTML;
     downloadData();
 }
 
