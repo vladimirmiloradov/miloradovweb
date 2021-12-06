@@ -1,0 +1,83 @@
+.nav-bg {
+    background-color: #D8C3A5;
+}
+
+.logo {
+    width:80px; 
+    height:60px;
+}
+
+.logo2 {
+    width:100px; 
+    height:80px;
+}
+
+.nav-item {
+    font-weight: bold;
+}
+
+.banner {
+    background-color: #EAE7DC;
+}
+
+.color {
+    color: #E85A4F;
+}
+
+.heading-line {
+    height: 3px;
+    max-width: 300px;
+    background-color: #E85A4F;
+}
+
+.assort {
+    background-color: #EAE7DC;
+    margin-bottom: -50px;
+}
+
+.assort-elem {
+    border: 3px solid #D8C3A5;
+}
+
+.price {
+    text-decoration: underline;
+    padding-top: auto;
+}
+
+.footer {
+    background-color: #D8C3A5;
+}
+
+.cakes-imgs {
+    width: 300px;
+    height: 300px;
+}
+
+.contacts {
+    background-color: #EAE7DC;
+}
+
+.addresses {
+    font-size:18px;
+}
+
+.socials {
+    font-size: 24px;
+}
+
+.btn:hover {
+    background-color: #E85A4F;
+}
+
+.btn {
+    color: #E85A4F;
+    border: 1px solid #E85A4F;
+}
+
+h4 {
+    color: #E85A4F;
+}
+
+.footer p {
+    font-weight: bold;
+}
