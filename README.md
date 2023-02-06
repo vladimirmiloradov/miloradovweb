@@ -1,1 +1,3 @@
-# miloradovweb
+<h1>Лабораторные работы по основам веб разработки</h1>
+
+Стэк разработки: HTML, CSS, JavaScript, Bootstrap
